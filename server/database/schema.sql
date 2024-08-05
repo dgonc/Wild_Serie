@@ -13,16 +13,16 @@ create table item (
 
 create table category (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  name VARCHAR NOT NULL 
-)
+  name VARCHAR(150) NOT NULL 
+);
 
-CREATE TABLE program (
+create table program (
   id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  title VARCHAR NOT NULL,
-  synopsis VARCHAR NOT NULL,
-  poster VARCHAR NOT NULL,
-  country VARCHAR NOT NULL,
+  title VARCHAR(150) NOT NULL,
+  synopsis TEXT NOT NULL,
+  poster VARCHAR(255) NOT NULL,
+  country VARCHAR(150) NOT NULL,
   year INT NOT NULL,
   category_id INT NOT NULL,
   FOREIGN KEY(category_id) REFERENCES category(id)
-)
+);
